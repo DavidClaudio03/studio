@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   aiAmbianceSelection,
   type AiAmbianceSelectionOutput,
@@ -10,23 +10,25 @@ import { Button } from "@/components/ui/button";
 import {
   Play,
   Pause,
-  Forward,
-  Rewind,
   Music4,
   Loader,
   ServerCrash,
+  Volume2,
+  VolumeX,
 } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
-import { Badge } from "./ui/badge";
+import { urls } from "@/lib/data";
 
 export function AmbiancePlayer() {
-  const [ambiance, setAmbiance] = useState<AiAmbianceSelectionOutput | null>(
-    null
-  );
+  const [ambiance, setAmbiance] = useState<AiAmbianceSelectionOutput | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [duration, setDuration] = useState(0);
+  const [isMuted, setIsMuted] = useState(false);
+  
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const fetchAmbiance = async () => {
@@ -46,14 +48,54 @@ export function AmbiancePlayer() {
   }, []);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const setAudioData = () => {
+      setDuration(audio.duration);
+    };
+
+    const setAudioTime = () => {
+      if (audio.duration > 0) {
+        setProgress((audio.currentTime / audio.duration) * 100);
+      }
+    };
+
+    audio.addEventListener("loadeddata", setAudioData);
+    audio.addEventListener("timeupdate", setAudioTime);
+
+    return () => {
+      audio.removeEventListener("loadeddata", setAudioData);
+      audio.removeEventListener("timeupdate", setAudioTime);
+    };
+  }, []);
+
+  const togglePlayPause = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
     if (isPlaying) {
-      interval = setInterval(() => {
-        setProgress((prev) => (prev >= 100 ? 0 : prev + 0.5));
-      }, 500);
+      audio.pause();
+    } else {
+      audio.play().catch(e => console.error("Audio play failed:", e));
     }
-    return () => clearInterval(interval);
-  }, [isPlaying]);
+    setIsPlaying(!isPlaying);
+  };
+  
+  const handleProgressChange = (value: number[]) => {
+      const audio = audioRef.current;
+      if (!audio || isNaN(audio.duration)) return;
+      const newTime = (value[0] / 100) * audio.duration;
+      audio.currentTime = newTime;
+      setProgress(value[0]);
+  }
+  
+  const formatTime = (timeInSeconds: number) => {
+    if (isNaN(timeInSeconds) || timeInSeconds === 0) return '0:00';
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
 
   const renderContent = () => {
     if (isLoading) {
@@ -73,9 +115,14 @@ export function AmbiancePlayer() {
         </div>
       );
     }
+    
+    // NOTE: The URL you provided was for a document. I've used a placeholder audio file. 
+    // Please replace `urls.activationAudio` in `src/lib/data.ts` with a direct link to an audio file (e.g., .mp3, .wav).
+    const audioSrc = urls.activationAudio;
 
     return (
       <div className="flex flex-col md:flex-row items-center gap-6 p-6">
+        <audio ref={audioRef} src={audioSrc} preload="metadata" muted={isMuted} onEnded={() => setIsPlaying(false)} />
         <div className="flex-shrink-0">
           <div className="size-32 rounded-lg bg-primary/10 flex items-center justify-center border-2 border-dashed border-primary">
             <Music4 className="size-16 text-primary" />
@@ -88,22 +135,28 @@ export function AmbiancePlayer() {
           </div>
           <p className="text-sm">{ambiance.description}</p>
           <div className="space-y-2">
-            <Slider value={[progress]} max={100} step={1} />
+             <Slider value={[progress]} max={100} step={1} onValueChange={handleProgressChange} />
+             <div className="flex justify-between items-center text-xs text-muted-foreground">
+                <span>{formatTime(audioRef.current?.currentTime || 0)}</span>
+                <span>{formatTime(duration)}</span>
+             </div>
             <div className="flex items-center justify-center gap-4">
-              <Button variant="ghost" size="icon">
-                <Rewind />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMuted(!isMuted)}
+              >
+                {isMuted ? <VolumeX /> : <Volume2 />}
               </Button>
               <Button
                 variant="default"
                 size="icon"
                 className="size-12 rounded-full"
-                onClick={() => setIsPlaying(!isPlaying)}
+                onClick={togglePlayPause}
               >
                 {isPlaying ? <Pause /> : <Play />}
               </Button>
-              <Button variant="ghost" size="icon">
-                <Forward />
-              </Button>
+               <div className="w-10 h-10"></div> {/* Spacer */}
             </div>
           </div>
         </div>

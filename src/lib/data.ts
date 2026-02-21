@@ -9,7 +9,8 @@ export const navLinks: NavLink[] = [
 ];
 
 export const urls = {
-  infographic: 'LINK_PDF_INFO',
+  infographic: 'https://drive.google.com/file/d/1Hzw-rGoeDs27QnZBgv-JkMIsKbGbBcLo/view?usp=sharing',
+  activationAudio: 'https://storage.googleapis.com/studioprod-assets/assets/temp-audio/ambient-music.mp3',
   compendium: 'https://docs.google.com/document/d/16_LenNt17G-e6ebyqy060L_3uNkXcZ7u/preview',
   canvaSlide1: 'https://www.canva.com/design/DAHAkKTcoQo/view?embed',
   canvaSlide2: 'https://www.canva.com/design/DAHBvOz_8Vc/view?embed',
@@ -57,3 +58,71 @@ export const rubricCriteria = [
   { criterion: 'Análisis Crítico', excellent: 'Demuestra un análisis profundo y original del tema.', good: 'Realiza un análisis correcto pero superficial.', needsImprovement: 'No hay evidencia de análisis crítico.' },
   { criterion: 'Presentación', excellent: 'El formato es innovador, organizado y estéticamente agradable.', good: 'El formato es claro y organizado.', needsImprovement: 'El formato es desorganizado o difícil de seguir.' },
 ];
+
+export const quizData = [
+    {
+      level: 1,
+      title: 'Nivel 1: Partes de la Planta',
+      questions: [
+        {
+          id: 'q1',
+          text: '¿Qué parte de la planta es responsable de absorber agua y nutrientes del suelo?',
+          options: ['Hoja', 'Tallo', 'Raíz', 'Flor'],
+          correctIndex: 2,
+          explanation: '¡Correcto! La raíz ancla la planta y absorbe el agua y los nutrientes esenciales para su crecimiento.'
+        },
+      ],
+    },
+    {
+      level: 2,
+      title: 'Nivel 2: Fotosíntesis',
+      questions: [
+        {
+          id: 'q2',
+          text: '¿En qué parte de la planta ocurre principalmente la fotosíntesis?',
+          options: ['Raíz', 'Flor', 'Tallo', 'Hoja'],
+          correctIndex: 3,
+          explanation: '¡Así es! Las hojas son como los paneles solares de la planta, capturando la luz del sol para producir su alimento.'
+        },
+      ],
+    },
+    {
+      level: 3,
+      title: 'Nivel 3: Ciclo de Vida',
+      questions: [
+        {
+          id: 'q3',
+          text: '¿Qué estructura de la planta se convierte en el fruto?',
+          options: ['El pétalo', 'El ovario de la flor', 'La hoja', 'El tallo'],
+          correctIndex: 1,
+          explanation: '¡Exacto! Después de la polinización, el ovario de la flor se desarrolla para convertirse en el fruto, que protege las semillas.'
+        },
+      ],
+    },
+    {
+      level: 4,
+      title: 'Nivel 4: Vertebrados',
+      questions: [
+        {
+          id: 'q4',
+          text: '¿Cuál de estos animales es vertebrado, es decir, tiene columna vertebral?',
+          options: ['Medusa', 'Pulpo', 'Serpiente', 'Lombriz'],
+          correctIndex: 2,
+          explanation: '¡Muy bien! Aunque no tiene patas, la serpiente tiene una larga y flexible columna vertebral.'
+        },
+      ],
+    },
+    {
+      level: 5,
+      title: 'Nivel 5: Invertebrados',
+      questions: [
+        {
+          id: 'q5',
+          text: '¿Cuál de las siguientes características pertenece a los animales invertebrados?',
+          options: ['Tienen esqueleto interno', 'No tienen columna vertebral', 'Todos tienen 6 patas', 'Son siempre pequeños'],
+          correctIndex: 1,
+          explanation: '¡Perfecto! La característica principal que define a los invertebrados es la ausencia de una columna vertebral.'
+        },
+      ],
+    },
+  ];
