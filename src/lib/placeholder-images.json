@@ -3,32 +3,32 @@
     {
       "id": "video1",
       "description": "Placeholder for video about the importance of plants",
-      "imageUrl": "https://images.unsplash.com/photo-1518895516942-8351b54a7ea3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxncmVlbiUyMHBsYW50c3xlbnwwfHx8fDE3NzE4MDMwNTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "green plants"
+      "imageUrl": "https://images.unsplash.com/photo-1497215842964-222b430dc094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsdXNoJTIwZ3JlZW4lMjBwbGFudHN8ZW58MHx8fHwxNzcyMzA0NzM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lush plants"
     },
     {
       "id": "video2",
       "description": "Placeholder for video about the parts of a plant",
-      "imageUrl": "https://images.unsplash.com/photo-1627632698379-b1473b02195f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYXJ0cyUyMG9mJTIwYSUyMHBsYW50fGVufDB8fHx8MTc3MTgwMzE0NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "plant anatomy"
+      "imageUrl": "https://images.unsplash.com/photo-1599599810694-b5b383546731?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwlantJTIwbGVhZiUyMHZlaW5zfGVufDB8fHx8MTc3MjMwNDc4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leaf veins"
     },
     {
       "id": "video3",
       "description": "Placeholder for video about the plant life cycle",
-      "imageUrl": "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwlantJTIwbGlmZSUyMGN5Y2xlfGVufDB8fHx8MTc3MTgwMzE3OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "plant cycle"
+      "imageUrl": "https://images.unsplash.com/photo-1492496913980-501348b61469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZWVkbGluZyUyMHNwcm91dHxlbnwwfHx8fDE3NzIzMDQ4MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "seedling sprout"
     },
     {
       "id": "video4",
       "description": "Placeholder for video about invertebrate animals",
-      "imageUrl": "https://images.unsplash.com/photo-1614090203022-77634f6f5b12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnZlcnRlYnJhdGV8ZW58MHx8fHwxNzcxODAzMjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "invertebrate animal"
+      "imageUrl": "https://images.unsplash.com/photo-1551201209-51c0734a761e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb3JhbCUyMHJlZWZ8ZW58MHx8fHwxNzcyMzA0ODYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coral reef"
     },
     {
       "id": "video5",
       "description": "Placeholder for video about vertebrate animals",
-      "imageUrl": "https://images.unsplash.com/photo-1574285013029-2929650193c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2ZXJ0ZWJyYXRlfGVufDB8fHx8MTc3MTgwMzI1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "vertebrate animal"
+      "imageUrl": "https://images.unsplash.com/photo-1598240498427-66b95d5a6d51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b2xmfGVufDB8fHx8MTc3MjMwNDg5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wolf"
     },
     {
       "id": "animal1",
