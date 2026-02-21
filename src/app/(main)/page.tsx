@@ -1,6 +1,7 @@
-import { AmbiancePlayer } from "@/components/ambiance-player";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Headphones } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Headphones, PlayCircle } from "lucide-react";
+import { urls } from "@/lib/data";
 
 export default function HomePage() {
   return (
@@ -14,27 +15,30 @@ export default function HomePage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        <section className="lg:col-span-2">
-          <AmbiancePlayer />
-        </section>
-
-        <section>
-          <Card className="h-full bg-primary/10 border-primary/20">
-            <CardHeader className="flex-row items-center gap-4">
-              <div className="rounded-full bg-primary/20 p-3">
-                <Headphones className="size-6 text-primary" />
-              </div>
-              <CardTitle className="text-primary">Guía de Escucha y Propósito Pedagógico</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                La música que escuchas ha sido diseñada por una IA para activar tu memoria sensorial. Sus ritmos y armonías están pensados para crear un estado de calma y concentración, facilitando la conexión y recordación de los conceptos que explorarás en esta unidad de aprendizaje.
-              </p>
-            </CardContent>
-          </Card>
-        </section>
-      </div>
+      <Card className="w-full">
+        <CardHeader>
+          <div className="flex items-center gap-4">
+            <div className="rounded-full bg-primary/10 p-3">
+              <Headphones className="size-8 text-primary" />
+            </div>
+            <div>
+              <CardTitle>Sintoniza tu Aprendizaje</CardTitle>
+              <CardDescription>Guía de Escucha y Propósito Pedagógico</CardDescription>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="text-muted-foreground">
+            La música que escucharás ha sido diseñada para activar tu memoria sensorial. Sus ritmos y armonías están pensados para crear un estado de calma y concentración, facilitando la conexión y recordación de los conceptos que explorarás en esta unidad de aprendizaje.
+          </p>
+          <Button asChild className="w-full" size="lg">
+            <a href={urls.activationAudio} target="_blank" rel="noopener noreferrer">
+              <PlayCircle className="mr-2" />
+              Escuchar Audio de Activación
+            </a>
+          </Button>
+        </CardContent>
+      </Card>
     </div>
   );
 }
