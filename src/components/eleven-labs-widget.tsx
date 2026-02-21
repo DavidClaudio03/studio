@@ -26,22 +26,20 @@ const iconMap: { [key: string]: React.ElementType } = {
 };
 
 type BotData = (typeof aiExperts)[number];
-type BotWithIcon = Omit<BotData, 'icon'> & { icon: React.ElementType };
 
 const SCRIPT_ID = "elevenlabs-convai-script";
 const AGENT_ID = "agent_7801khmjk06seegbb6msgw9b2q6d";
 
 export function ElevenLabsWidget({
   trigger,
-  bot: botWithIconName,
+  bot: botData,
 }: {
   trigger: ReactNode;
   bot: BotData;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   
-  const BotIcon = iconMap[botWithIconName.icon];
-  const bot: BotWithIcon = { ...botWithIconName, icon: BotIcon };
+  const BotIcon = iconMap[botData.icon];
 
   useEffect(() => {
     if (isOpen) {
@@ -62,9 +60,9 @@ export function ElevenLabsWidget({
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <bot.icon className="size-6 text-primary" /> {bot.name}
+            <BotIcon className="size-6 text-primary" /> {botData.name}
           </DialogTitle>
-          <DialogDescription>{bot.description}</DialogDescription>
+          <DialogDescription>{botData.description}</DialogDescription>
         </DialogHeader>
         <div className="py-4">
           {isOpen && (

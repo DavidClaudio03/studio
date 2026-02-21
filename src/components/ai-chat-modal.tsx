@@ -37,11 +37,10 @@ type Message = {
 };
 
 type BotData = (typeof aiExperts)[number];
-type BotWithIcon = Omit<BotData, "icon"> & { icon: React.ElementType };
 
 export function AIChatModal({
   trigger,
-  bot: botWithIconName,
+  bot: botData,
   isPlaceholder = false,
 }: {
   trigger: ReactNode;
@@ -55,19 +54,18 @@ export function AIChatModal({
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
-  const BotIcon = iconMap[botWithIconName.icon];
-  const bot: BotWithIcon = { ...botWithIconName, icon: BotIcon };
+  const BotIcon = iconMap[botData.icon];
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
         // Set initial greeting message from the bot
         const initialMessage: Message = {
             role: 'assistant',
-            content: `¡Hola! Soy tu ${bot.name}. ${bot.description}`,
+            content: `¡Hola! Soy tu ${botData.name}. ${botData.description}`,
         };
         setMessages([initialMessage]);
     }
-  }, [isOpen, messages.length, bot.name, bot.description]);
+  }, [isOpen, messages.length, botData.name, botData.description]);
 
   useEffect(() => {
     if (scrollAreaRef.current) {
@@ -104,7 +102,7 @@ export function AIChatModal({
   const handlePlaceholderClick = () => {
     toast({
         title: "Próximamente",
-        description: `El ${bot.name} está en desarrollo y estará disponible pronto.`,
+        description: `El ${botData.name} está en desarrollo y estará disponible pronto.`,
     });
   }
 
@@ -119,9 +117,9 @@ export function AIChatModal({
       <DialogContent className="sm:max-w-[600px] grid-rows-[auto_1fr_auto] h-[80vh] max-h-[700px] flex flex-col">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <bot.icon className="size-6 text-primary" /> {bot.name}
+            <BotIcon className="size-6 text-primary" /> {botData.name}
           </DialogTitle>
-          <DialogDescription>{bot.description}</DialogDescription>
+          <DialogDescription>{botData.description}</DialogDescription>
         </DialogHeader>
         <ScrollArea className="flex-1 my-4 pr-4 -mr-4">
             <div className="space-y-4">
@@ -134,7 +132,7 @@ export function AIChatModal({
                 >
                     {message.role === "assistant" && (
                     <div className="size-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                        <bot.icon className="size-5 text-primary-foreground" />
+                        <BotIcon className="size-5 text-primary-foreground" />
                     </div>
                     )}
                     <div
@@ -156,7 +154,7 @@ export function AIChatModal({
                 {isLoading && (
                     <div className="flex items-start gap-3">
                         <div className="size-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                            <bot.icon className="size-5 text-primary-foreground" />
+                            <BotIcon className="size-5 text-primary-foreground" />
                         </div>
                         <div className="rounded-lg px-4 py-2 bg-muted flex items-center">
                             <Loader className="size-5 animate-spin" />

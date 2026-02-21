@@ -67,6 +67,30 @@ function NavItem({
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const userButton = (
+      <Button
+        variant="ghost"
+        className="flex h-auto w-full items-center justify-start gap-2 p-2"
+      >
+        <Avatar className="size-8">
+          <AvatarImage src="https://picsum.photos/seed/user/40/40" />
+          <AvatarFallback>ED</AvatarFallback>
+        </Avatar>
+        <div className="text-left">
+          <p className="text-sm font-medium">El Docente</p>
+          <p className="text-xs text-muted-foreground">
+            docente@ecocyberlearn.edu
+          </p>
+        </div>
+      </Button>
+  );
+
   return (
     <SidebarProvider>
       <Sidebar>
@@ -84,40 +108,28 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           </SidebarMenu>
         </SidebarContent>
         <SidebarFooter className="p-4">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                className="flex h-auto w-full items-center justify-start gap-2 p-2"
-              >
-                <Avatar className="size-8">
-                  <AvatarImage src="https://picsum.photos/seed/user/40/40" />
-                  <AvatarFallback>ED</AvatarFallback>
-                </Avatar>
-                <div className="text-left">
-                  <p className="text-sm font-medium">El Docente</p>
-                  <p className="text-xs text-muted-foreground">
-                    docente@ecocyberlearn.edu
-                  </p>
-                </div>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56" align="end" forceMount>
-              <DropdownMenuLabel className="font-normal">
-                <div className="flex flex-col space-y-1">
-                  <p className="text-sm font-medium leading-none">El Docente</p>
-                  <p className="text-xs leading-none text-muted-foreground">
-                    docente@ecocyberlearn.edu
-                  </p>
-                </div>
-              </DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Perfil</DropdownMenuItem>
-              <DropdownMenuItem>Ajustes</DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Cerrar Sesión</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {mounted ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                {userButton}
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56" align="end" forceMount>
+                <DropdownMenuLabel className="font-normal">
+                  <div className="flex flex-col space-y-1">
+                    <p className="text-sm font-medium leading-none">El Docente</p>
+                    <p className="text-xs leading-none text-muted-foreground">
+                      docente@ecocyberlearn.edu
+                    </p>
+                  </div>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Perfil</DropdownMenuItem>
+                <DropdownMenuItem>Ajustes</DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Cerrar Sesión</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : userButton }
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>
