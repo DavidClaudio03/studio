@@ -45,12 +45,11 @@ const aiAmbianceSelectionPrompt = ai.definePrompt({
   output: { schema: AiAmbianceSelectionOutputSchema },
   prompt: `You are an AI assistant specialized in creating optimal learning environments. Your task is to suggest a detailed description for an ambient audio track that will help students focus and feel calm while learning.
 
-The context for this ambient track is a 'Cyberpunk-Nature' themed virtual learning ecosystem. The track should blend futuristic elements with serene natural sounds, fostering both concentration and tranquility.
+The context for this ambient track is a 'Cyberpunk-Nature' themed virtual learning ecosystem. The track should blend futuristic and serene natural sounds, fostering both concentration and tranquility.
 
 Provide a detailed description of this ideal ambient track, including its mood, overarching theme, and specific elements that define its soundscape. This description will be used to generate the audio track.
 
-Desired output format:
-{{json schema=AiAmbianceSelectionOutputSchema}}`,
+Your response must be a valid JSON object matching the requested output schema.`,
 });
 
 const aiAmbianceSelectionFlow = ai.defineFlow(
