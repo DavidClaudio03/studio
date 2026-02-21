@@ -9,8 +9,8 @@
     {
       "id": "video2",
       "description": "Placeholder for video about the parts of a plant",
-      "imageUrl": "https://images.unsplash.com/photo-1599599810694-b5b383546731?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwlantJTIwbGVhZiUyMHZlaW5zfGVufDB8fHx8MTc3MjMwNDc4OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "leaf veins"
+      "imageUrl": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwlantcyUyMGxlYXZlc3xlbnwwfHx8fDE3NzIzMDUzODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "plant leaves"
     },
     {
       "id": "video3",
@@ -21,14 +21,14 @@
     {
       "id": "video4",
       "description": "Placeholder for video about invertebrate animals",
-      "imageUrl": "https://images.unsplash.com/photo-1551201209-51c0734a761e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb3JhbCUyMHJlZWZ8ZW58MHx8fHwxNzcyMzA0ODYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coral reef"
+      "imageUrl": "https://images.unsplash.com/photo-1574758504-62951c275916?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbnZlcnRlYnJhdGV8ZW58MHx8fHwxNzcyMzA1NDM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jellyfish"
     },
     {
       "id": "video5",
       "description": "Placeholder for video about vertebrate animals",
-      "imageUrl": "https://images.unsplash.com/photo-1598240498427-66b95d5a6d51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b2xmfGVufDB8fHx8MTc3MjMwNDg5NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "wolf"
+      "imageUrl": "https://images.unsplash.com/photo-1500133224926-900733544521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0aWdlcnxlbnwwfHx8fDE3NzIzMDU1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tiger"
     },
     {
       "id": "animal1",
