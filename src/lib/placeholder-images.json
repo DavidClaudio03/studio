@@ -3,14 +3,14 @@
     {
       "id": "video1",
       "description": "Placeholder for video about the importance of plants",
-      "imageUrl": "https://images.unsplash.com/photo-1497215842964-222b430dc094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsdXNoJTIwZ3JlZW4lMjBwbGFudHN8ZW58MHx8fHwxNzcyMzA0NzM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "lush plants"
+      "imageUrl": "https://images.unsplash.com/photo-1453974336168-2b9954443b59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwbGFudCUyMGxpZmV8ZW58MHx8fHwxNzc4OTI3NTc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "plant life"
     },
     {
       "id": "video2",
       "description": "Placeholder for video about the parts of a plant",
-      "imageUrl": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwlantcyUyMGxlYXZlc3xlbnwwfHx8fDE3NzIzMDUzODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "plant leaves"
+      "imageUrl": "https://images.unsplash.com/photo-1620253456249-01c3a6452834?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYXJ0cyUyMG9mJTIwYSUyMHBsYW50fGVufDB8fHx8MTc3ODkyNzYyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "plant parts"
     },
     {
       "id": "video3",
@@ -21,14 +21,14 @@
     {
       "id": "video4",
       "description": "Placeholder for video about invertebrate animals",
-      "imageUrl": "https://images.unsplash.com/photo-1574758504-62951c275916?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbnZlcnRlYnJhdGV8ZW58MHx8fHwxNzcyMzA1NDM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "jellyfish"
+      "imageUrl": "https://images.unsplash.com/photo-1474591325922-a9b2375b4848?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxidXR0ZXJmbHl8ZW58MHx8fHwxNzc4OTI4Njg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "butterfly"
     },
     {
       "id": "video5",
       "description": "Placeholder for video about vertebrate animals",
-      "imageUrl": "https://images.unsplash.com/photo-1500133224926-900733544521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0aWdlcnxlbnwwfHx8fDE3NzIzMDU1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "tiger"
+      "imageUrl": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaW9ufGVufDB8fHx8MTc3ODkyODYyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lion"
     },
     {
       "id": "animal1",
