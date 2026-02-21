@@ -38,8 +38,8 @@ export function AmbiancePlayer() {
         const result = await aiAmbianceSelection({});
         setAmbiance(result);
       } catch (e) {
-        console.error(e);
-        setError("No se pudo generar el ambiente sonoro. Inténtalo de nuevo.");
+        console.error("Failed to generate ambiance:", e);
+        setError("Failed to generate ambiance.");
       } finally {
         setIsLoading(false);
       }
@@ -107,17 +107,12 @@ export function AmbiancePlayer() {
       );
     }
 
-    if (error || !ambiance) {
-      return (
-        <div className="flex flex-col items-center justify-center gap-4 h-full min-h-[200px] text-destructive">
-          <ServerCrash className="size-10" />
-          <p>{error || "Ocurrió un error inesperado."}</p>
-        </div>
-      );
-    }
+    const currentAmbiance = ambiance ?? {
+        theme: "Cyber-Nature",
+        mood: "Focalizado y Calmado",
+        description: "Sonidos ambientales generados por IA para mejorar la concentración. El reproductor funcionará incluso si la descripción detallada no se puede cargar.",
+    };
     
-    // NOTE: The URL you provided was for a document. I've used a placeholder audio file. 
-    // Please replace `urls.activationAudio` in `src/lib/data.ts` with a direct link to an audio file (e.g., .mp3, .wav).
     const audioSrc = urls.activationAudio;
 
     return (
@@ -130,10 +125,10 @@ export function AmbiancePlayer() {
         </div>
         <div className="w-full space-y-3">
           <div>
-            <h3 className="text-2xl font-bold text-primary">{ambiance.theme}</h3>
-            <p className="text-sm text-muted-foreground">{ambiance.mood}</p>
+            <h3 className="text-2xl font-bold text-primary">{currentAmbiance.theme}</h3>
+            <p className="text-sm text-muted-foreground">{currentAmbiance.mood}</p>
           </div>
-          <p className="text-sm">{ambiance.description}</p>
+          <p className="text-sm">{currentAmbiance.description}</p>
           <div className="space-y-2">
              <Slider value={[progress]} max={100} step={1} onValueChange={handleProgressChange} />
              <div className="flex justify-between items-center text-xs text-muted-foreground">

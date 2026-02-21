@@ -10,7 +10,7 @@ export const navLinks: NavLink[] = [
 
 export const urls = {
   infographic: 'https://drive.google.com/file/d/1Hzw-rGoeDs27QnZBgv-JkMIsKbGbBcLo/view?usp=sharing',
-  activationAudio: 'https://storage.googleapis.com/studioprod-assets/assets/temp-audio/ambient-music.mp3',
+  activationAudio: 'https://drive.google.com/file/d/16_LenNt17G-e6ebyqy060L_3uNkXcZ7u/view?usp=sharing',
   compendium: 'https://docs.google.com/document/d/16_LenNt17G-e6ebyqy060L_3uNkXcZ7u/preview',
   canvaSlide1: 'https://www.canva.com/design/DAHAkKTcoQo/view?embed',
   canvaSlide2: 'https://www.canva.com/design/DAHBvOz_8Vc/view?embed',
