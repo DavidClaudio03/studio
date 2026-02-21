@@ -15,20 +15,10 @@ import {
   SidebarContent,
   SidebarFooter,
 } from '@/components/ui/sidebar';
-import { Button } from '@/components/ui/button';
 import { navLinks } from '@/lib/data';
 import * as Lucide from 'lucide-react';
 import { LogoIcon } from '@/components/icons/LogoIcon';
-import { cn } from '@/lib/utils';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { UserButton } from '@/components/user-button';
 
 function NavItem({
   href,
@@ -60,26 +50,6 @@ function NavItem({
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [isClient, setIsClient] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  const userButtonContent = (
-    <>
-      <Avatar className="size-8">
-        <AvatarImage src="https://picsum.photos/seed/user/40/40" />
-        <AvatarFallback>ED</AvatarFallback>
-      </Avatar>
-      <div className="text-left">
-        <p className="text-sm font-medium">El Docente</p>
-        <p className="text-xs text-muted-foreground">
-          docente@ecocyberlearn.edu
-        </p>
-      </div>
-    </>
-  );
 
   return (
     <SidebarProvider>
@@ -98,40 +68,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           </SidebarMenu>
         </SidebarContent>
         <SidebarFooter className="p-4">
-          {isClient ? (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="flex h-auto w-full items-center justify-start gap-2 p-2"
-                >
-                  {userButtonContent}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56" align="end" forceMount>
-                <DropdownMenuLabel className="font-normal">
-                  <div className="flex flex-col space-y-1">
-                    <p className="text-sm font-medium leading-none">El Docente</p>
-                    <p className="text-xs leading-none text-muted-foreground">
-                      docente@ecocyberlearn.edu
-                    </p>
-                  </div>
-                </DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>Perfil</DropdownMenuItem>
-                <DropdownMenuItem>Ajustes</DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>Cerrar Sesión</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          ) : (
-            <Button
-              variant="ghost"
-              className="flex h-auto w-full items-center justify-start gap-2 p-2"
-            >
-              {userButtonContent}
-            </Button>
-          )}
+          <UserButton />
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>
