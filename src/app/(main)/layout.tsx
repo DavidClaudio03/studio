@@ -30,13 +30,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-const getInitial = (name: string) => {
-  return name
-    .split(' ')
-    .map((n) => n[0])
-    .join('');
-};
-
 function NavItem({
   href,
   label,
@@ -67,28 +60,25 @@ function NavItem({
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [mounted, setMounted] = React.useState(false);
+  const [isClient, setIsClient] = React.useState(false);
 
   React.useEffect(() => {
-    setMounted(true);
+    setIsClient(true);
   }, []);
 
-  const userButton = (
-      <Button
-        variant="ghost"
-        className="flex h-auto w-full items-center justify-start gap-2 p-2"
-      >
-        <Avatar className="size-8">
-          <AvatarImage src="https://picsum.photos/seed/user/40/40" />
-          <AvatarFallback>ED</AvatarFallback>
-        </Avatar>
-        <div className="text-left">
-          <p className="text-sm font-medium">El Docente</p>
-          <p className="text-xs text-muted-foreground">
-            docente@ecocyberlearn.edu
-          </p>
-        </div>
-      </Button>
+  const userButtonContent = (
+    <>
+      <Avatar className="size-8">
+        <AvatarImage src="https://picsum.photos/seed/user/40/40" />
+        <AvatarFallback>ED</AvatarFallback>
+      </Avatar>
+      <div className="text-left">
+        <p className="text-sm font-medium">El Docente</p>
+        <p className="text-xs text-muted-foreground">
+          docente@ecocyberlearn.edu
+        </p>
+      </div>
+    </>
   );
 
   return (
@@ -108,10 +98,15 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           </SidebarMenu>
         </SidebarContent>
         <SidebarFooter className="p-4">
-          {mounted ? (
+          {isClient ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                {userButton}
+                <Button
+                  variant="ghost"
+                  className="flex h-auto w-full items-center justify-start gap-2 p-2"
+                >
+                  {userButtonContent}
+                </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56" align="end" forceMount>
                 <DropdownMenuLabel className="font-normal">
@@ -129,7 +124,14 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
                 <DropdownMenuItem>Cerrar Sesión</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-          ) : userButton }
+          ) : (
+            <Button
+              variant="ghost"
+              className="flex h-auto w-full items-center justify-start gap-2 p-2"
+            >
+              {userButtonContent}
+            </Button>
+          )}
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>
