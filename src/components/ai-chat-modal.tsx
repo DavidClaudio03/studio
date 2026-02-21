@@ -13,10 +13,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Loader, Send, User, AlertCircle, Bot as BotIconLucide } from "lucide-react";
+import { Loader, Send, User, Bot as BotIconLucide } from "lucide-react";
 import { aiLearningAssistant } from "@/ai/flows/ai-learning-assistant-flow";
 import { useToast } from "@/hooks/use-toast";
-import type { aiBots } from "@/lib/data";
+import type { aiExperts } from "@/lib/data";
 import { BrainCircuitIcon } from "@/components/icons/BrainCircuitIcon";
 import { LeafIcon } from "@/components/icons/LeafIcon";
 import { DnaIcon } from "@/components/icons/DnaIcon";
@@ -36,7 +36,7 @@ type Message = {
   content: string;
 };
 
-type BotData = (typeof aiBots)[number];
+type BotData = (typeof aiExperts)[number];
 type BotWithIcon = Omit<BotData, "icon"> & { icon: React.ElementType };
 
 export function AIChatModal({
@@ -59,6 +59,17 @@ export function AIChatModal({
   const bot: BotWithIcon = { ...botWithIconName, icon: BotIcon };
 
   useEffect(() => {
+    if (isOpen && messages.length === 0) {
+        // Set initial greeting message from the bot
+        const initialMessage: Message = {
+            role: 'assistant',
+            content: `¡Hola! Soy tu ${bot.name}. ${bot.description}`,
+        };
+        setMessages([initialMessage]);
+    }
+  }, [isOpen, messages.length, bot.name, bot.description]);
+
+  useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
     }
@@ -74,6 +85,7 @@ export function AIChatModal({
     setIsLoading(true);
 
     try {
+      // Use a more specific prompt for different bots if needed in the future
       const { answer } = await aiLearningAssistant({ question: input });
       const assistantMessage: Message = { role: "assistant", content: answer };
       setMessages((prev) => [...prev, assistantMessage]);

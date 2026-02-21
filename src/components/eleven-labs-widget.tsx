@@ -9,7 +9,7 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import type { aiBots } from "@/lib/data";
+import type { aiExperts } from "@/lib/data";
 import { BrainCircuitIcon } from "@/components/icons/BrainCircuitIcon";
 import { LeafIcon } from "@/components/icons/LeafIcon";
 import { DnaIcon } from "@/components/icons/DnaIcon";
@@ -25,7 +25,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   AtomIcon,
 };
 
-type BotData = (typeof aiBots)[number];
+type BotData = (typeof aiExperts)[number];
 type BotWithIcon = Omit<BotData, 'icon'> & { icon: React.ElementType };
 
 const SCRIPT_ID = "elevenlabs-convai-script";

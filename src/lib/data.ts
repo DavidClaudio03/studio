@@ -1,11 +1,11 @@
 import type { NavLink } from '@/types';
 
 export const navLinks: NavLink[] = [
-  { href: '/', label: 'Home', icon: 'LayoutGrid' },
-  { href: '/conecta', label: 'Conecta', icon: 'Link2' },
-  { href: '/explora', label: 'Explora', icon: 'FlaskConical' },
-  { href: '/interactua', label: 'Interactúa', icon: 'ToyBrick' },
-  { href: '/reto-final', label: 'Reto Final', icon: 'Trophy' },
+  { href: '/', label: 'Activación', icon: 'PlayCircle' },
+  { href: '/conecta', label: 'Fundamentos', icon: 'FileText' },
+  { href: '/explora', label: 'Exploración', icon: 'Search' },
+  { href: '/interactua', label: 'Laboratorio IA', icon: 'Bot' },
+  { href: '/reto-final', label: 'Evaluación', icon: 'Trophy' },
 ];
 
 export const urls = {
@@ -17,39 +17,39 @@ export const urls = {
 };
 
 export const videos = [
-  { id: 1, src: 'https://drive.google.com/file/d/1xiGkmATkrmyNjhdcybUqun1NZBmEubIK/view?usp=sharing', title: 'Video Educativo 1', imageId: 'video1' },
-  { id: 2, src: 'https://drive.google.com/file/d/1-bQrSwSUTPQ1KocHeDODHJSXT4w7U9VA/view?usp=sharing', title: 'Video Educativo 2', imageId: 'video2' },
-  { id: 3, src: 'https://drive.google.com/file/d/1e_MfNPij1QOIlwMd5yrBvHR94e0qtLJW/view?usp=sharing', title: 'Video Educativo 3', imageId: 'video3' },
-  { id: 4, src: 'https://drive.google.com/file/d/1TuWn973yEoEddPn_m6V-5CTmYbKHd8s8/view?usp=sharing', title: 'Video Educativo 4', imageId: 'video4' },
-  { id: 5, src: 'https://drive.google.com/file/d/1YINqtGlnBtXyHNeu5M4dFocyZXwElLN0/view?usp=sharing', title: 'Video Educativo 5', imageId: 'video5' },
+  { id: 1, src: 'https://drive.google.com/file/d/1xiGkmATkrmyNjhdcybUqun1NZBmEubIK/view?usp=sharing', title: 'El Ciclo del Agua', imageId: 'video1' },
+  { id: 2, src: 'https://drive.google.com/file/d/1-bQrSwSUTPQ1KocHeDODHJSXT4w7U9VA/view?usp=sharing', title: 'Adaptaciones de Seres Vivos', imageId: 'video2' },
+  { id: 3, src: 'https://drive.google.com/file/d/1e_MfNPij1QOIlwMd5yrBvHR94e0qtLJW/view?usp=sharing', title: 'Ecosistemas y Cadenas Tróficas', imageId: 'video3' },
+  { id: 4, src: 'https://drive.google.com/file/d/1TuWn973yEoEddPn_m6V-5CTmYbKHd8s8/view?usp=sharing', title: 'Fotosíntesis: La Fábrica de la Vida', imageId: 'video4' },
+  { id: 5, src: 'https://drive.google.com/file/d/1YINqtGlnBtXyHNeu5M4dFocyZXwElLN0/view?usp=sharing', title: 'Introducción a la Genética', imageId: 'video5' },
 ];
 
-export const faqs = [
-  {
-    question: '¿Qué es la fotosíntesis?',
-    answer: 'La fotosíntesis es el proceso que realizan las plantas para convertir la luz solar, el agua y el dióxido de carbono en glucosa (su alimento) y oxígeno.',
-  },
-  {
-    question: '¿Por qué los camaleones cambian de color?',
-    answer: 'Los camaleones cambian de color principalmente para regular su temperatura, comunicarse con otros camaleones y camuflarse para protegerse de depredadores o para cazar.',
-  },
-  {
-    question: '¿Cuál es el animal más grande del mundo?',
-    answer: 'El animal más grande del mundo es la ballena azul. Puede llegar a medir hasta 30 metros de largo y pesar más de 170 toneladas.',
-  },
-  {
-    question: '¿Cómo respiran los peces bajo el agua?',
-    answer: 'Los peces respiran a través de branquias, que son órganos especiales que les permiten extraer el oxígeno disuelto en el agua y liberar dióxido de carbono.',
-  },
+
+export const plantFlashcards = [
+  { id: 'raiz', name: 'Raíz', function: 'Absorbe agua y nutrientes del suelo, ancla la planta y almacena reservas de alimento.' },
+  { id: 'tallo', name: 'Tallo', function: 'Soporta las hojas, flores y frutos; transporta agua y nutrientes desde la raíz a las hojas, y el alimento producido en las hojas al resto de la planta.' },
+  { id: 'hoja', name: 'Hoja', function: 'Principal órgano de la fotosíntesis, donde la planta produce su alimento (glucosa) utilizando luz solar, agua y dióxido de carbono. También regula la transpiración.' },
+  { id: 'flor', name: 'Flor', function: 'Estructura reproductiva de las plantas angiospermas. Su función es producir semillas a través de la reproducción sexual (polinización y fecundación).' },
+  { id: 'fruto', name: 'Fruto', function: 'Protege las semillas y ayuda en su dispersión. Se desarrolla a partir del ovario de la flor después de la fecundación.' },
+  { id: 'semilla', name: 'Semilla', function: 'Contiene el embrión de una nueva planta y una reserva de alimento, protegidos por una cubierta. Germina bajo condiciones adecuadas para dar origen a una nueva planta.' },
 ];
 
-export const aiBots = [
-  { id: 'learning-assistant', name: 'Asistente de Aprendizaje', icon: 'BrainCircuitIcon', description: "Pregúntame cualquier cosa sobre tus lecciones." },
-  { id: 'eleven-labs', name: 'Asistente de Voz', icon: 'Bot', description: "Habla conmigo para explorar nuevos temas." },
-  { id: 'biology-bot', name: 'Bot de Biología', icon: 'LeafIcon', description: "Explora el fascinante mundo de los seres vivos." },
-  { id: 'genetics-bot', name: 'Bot de Genética', icon: 'DnaIcon', description: "Descubre los secretos del ADN y la herencia." },
-  { id: 'physics-bot', name: 'Bot de Física', icon: 'AtomIcon', description: "Entiende las leyes que gobiernan el universo." },
+export const animalData = [
+  { id: 'leon', name: 'León', type: 'Vertebrado', imageId: 'animal1', explanation: 'Correcto. Los leones tienen una columna vertebral que les proporciona soporte estructural.' },
+  { id: 'medusa', name: 'Medusa', type: 'Invertebrado', imageId: 'animal2', explanation: 'Correcto. Las medusas no poseen columna vertebral; su cuerpo es gelatinoso y soportado por el agua.' },
+  { id: 'aguila', name: 'Águila', type: 'Vertebrado', imageId: 'animal3', explanation: 'Correcto. Las águilas son aves y, como todos los vertebrados, tienen un esqueleto interno con columna vertebral.' },
+  { id: 'pulpo', name: 'Pulpo', type: 'Invertebrado', imageId: 'animal4', explanation: 'Correcto. Los pulpos son moluscos sin esqueleto interno. Su cuerpo blando les permite una gran flexibilidad.' },
+  { id: 'serpiente', name: 'Serpiente', type: 'Vertebrado', imageId: 'animal5', explanation: 'Correcto. A pesar de su cuerpo flexible, las serpientes tienen una columna vertebral muy larga compuesta de muchas vértebras.' },
 ];
+
+export const aiExperts = [
+    { id: 'learning-assistant', name: 'Tutor General', icon: 'BrainCircuitIcon', description: 'Tu asistente principal para cualquier duda general.' },
+    { id: 'eleven-labs', name: 'Asistente de Voz', icon: 'Bot', description: 'Explora temas complejos conversando conmigo.' },
+    { id: 'botany-expert', name: 'Experto en Botánica', icon: 'LeafIcon', description: 'Pregúntame sobre el reino de las plantas.' },
+    { id: 'fauna-specialist', name: 'Especialista en Fauna', icon: 'DnaIcon', description: 'Analicemos la diversidad y adaptaciones del reino animal.' },
+    { id: 'science-tutor', name: 'Tutor de Ciencias', icon: 'AtomIcon', description: 'Profundicemos en los principios de la física y la química.' },
+];
+
 
 export const rubricCriteria = [
   { criterion: 'Claridad y Precisión', excellent: 'Presenta conceptos con total claridad y sin errores.', good: 'Presenta conceptos de forma clara con errores menores.', needsImprovement: 'La presentación de conceptos es confusa o tiene errores significativos.' },

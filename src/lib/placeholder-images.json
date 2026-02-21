@@ -29,6 +29,36 @@
       "description": "Placeholder for video 5",
       "imageUrl": "https://images.unsplash.com/photo-1653158861306-e5b3804f6115?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dmlydHVhbCUyMHJlYWxpdHl8ZW58MHx8fHwxNzcxNjQ1MTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "virtual reality"
+    },
+    {
+      "id": "animal1",
+      "description": "Lion",
+      "imageUrl": "https://images.unsplash.com/photo-1607274134639-043342705e6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGlvbnxlbnwwfHx8fDE3NzE3MDkxODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lion"
+    },
+    {
+      "id": "animal2",
+      "description": "Jellyfish",
+      "imageUrl": "https://images.unsplash.com/photo-1508625935447-e0ebc2cdf6bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxqZWxseWZpc2h8ZW58MHx8fHwxNzcxNzA5MTg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jellyfish"
+    },
+    {
+      "id": "animal3",
+      "description": "Eagle",
+      "imageUrl": "https://images.unsplash.com/photo-1486578077620-8a022ddd481f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlYWdsZXxlbnwwfHx8fDE3NzE3MDkxODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eagle"
+    },
+    {
+      "id": "animal4",
+      "description": "Octopus",
+      "imageUrl": "https://images.unsplash.com/photo-1683163826671-7c79d06088b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxvY3RvcHVzfGVufDB8fHx8MTc3MTYwNTU4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "octopus"
+    },
+    {
+      "id": "animal5",
+      "description": "Snake",
+      "imageUrl": "https://images.unsplash.com/photo-1531386151447-fd76ad50012f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzbmFrZXxlbnwwfHx8fDE3NzE2NjU2MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "snake"
     }
   ]
 }

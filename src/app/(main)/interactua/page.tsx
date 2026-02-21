@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { videos, urls, aiBots } from "@/lib/data";
+import { videos, urls, aiExperts } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,7 +27,7 @@ const VideoGallery = () => (
       <CardHeader>
         <div className="flex items-center gap-4">
           <PlayCircle className="size-8 text-primary" />
-          <CardTitle>Galería de Videos</CardTitle>
+          <CardTitle>Videoteca de Apoyo</CardTitle>
         </div>
         <CardDescription>
           Explora estos recursos audiovisuales para reforzar tu aprendizaje.
@@ -69,10 +69,10 @@ const SlidesVisualizer = () => (
       <CardHeader>
         <div className="flex items-center gap-4">
           <Presentation className="size-8 text-primary" />
-          <CardTitle>Visualizador de Slides</CardTitle>
+          <CardTitle>Visualizador de Presentaciones</CardTitle>
         </div>
         <CardDescription>
-          Interactúa con las presentaciones de Canva.
+          Interactúa con las presentaciones del curso.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -113,31 +113,33 @@ const AIPanel = () => (
       <CardHeader>
          <div className="flex items-center gap-4">
             <Bot className="size-8 text-primary" />
-            <CardTitle>Panel de Inteligencia Artificial</CardTitle>
+            <CardTitle>Panel de Consulta con Expertos IA</CardTitle>
           </div>
         <CardDescription>
-          Interactúa con nuestros asistentes de IA para una experiencia de aprendizaje personalizada.
+          Conversa con nuestros asistentes de IA para una experiencia de aprendizaje personalizada.
         </CardDescription>
       </CardHeader>
-      <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {aiBots.map((bot) => {
+      <CardContent className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {aiExperts.map((bot) => {
           const BotIcon = iconMap[bot.icon];
           const TriggerButton = (
-            <Button variant="outline" className="h-24 w-full flex flex-col items-center justify-center gap-2 p-4 text-center hover:bg-accent/20 hover:border-accent">
+            <div className="group relative flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-primary/40 bg-card p-4 text-center transition-all hover:border-primary hover:bg-primary/10 h-36">
+              <div className="rounded-full bg-primary/10 p-3 transition-colors group-hover:bg-primary/20">
                 <BotIcon className="size-8 text-primary" />
-                <span className="font-semibold">{bot.name}</span>
-            </Button>
+              </div>
+              <span className="font-semibold text-sm">{bot.name}</span>
+              <div className="absolute -bottom-3 rounded-full bg-background p-1">
+                <Bot className="size-5 text-accent" />
+              </div>
+            </div>
           );
           
-          if (bot.id === 'learning-assistant') {
-            return <AIChatModal key={bot.id} trigger={TriggerButton} bot={bot} />;
-          }
           if (bot.id === 'eleven-labs') {
             return <ElevenLabsWidget key={bot.id} trigger={TriggerButton} bot={bot} />;
           }
           
           return (
-             <AIChatModal key={bot.id} trigger={TriggerButton} bot={bot} isPlaceholder />
+             <AIChatModal key={bot.id} trigger={TriggerButton} bot={bot} />
           );
         })}
       </CardContent>
@@ -146,15 +148,15 @@ const AIPanel = () => (
 );
 
 
-export default function InteractuaPage() {
+export default function LaboratorioIAPage() {
   return (
     <div className="space-y-8">
       <header>
         <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary">
-          Módulo: Interactúa
+          Fase: Laboratorio IA
         </h1>
         <p className="text-lg text-muted-foreground">
-          Aprende haciendo. Explora, visualiza y conversa con la IA.
+          Aprende haciendo. Explora recursos multimedia y conversa con tutores de IA.
         </p>
       </header>
       
