@@ -18,11 +18,11 @@ export const urls = {
 };
 
 export const videos = [
-  { id: 1, src: 'https://drive.google.com/file/d/1xiGkmATkrmyNjhdcybUqun1NZBmEubIK/view?usp=sharing', title: 'El Ciclo del Agua', imageId: 'video1' },
-  { id: 2, src: 'https://drive.google.com/file/d/1-bQrSwSUTPQ1KocHeDODHJSXT4w7U9VA/view?usp=sharing', title: 'Adaptaciones de Seres Vivos', imageId: 'video2' },
-  { id: 3, src: 'https://drive.google.com/file/d/1e_MfNPij1QOIlwMd5yrBvHR94e0qtLJW/view?usp=sharing', title: 'Ecosistemas y Cadenas Tróficas', imageId: 'video3' },
-  { id: 4, src: 'https://drive.google.com/file/d/1TuWn973yEoEddPn_m6V-5CTmYbKHd8s8/view?usp=sharing', title: 'Fotosíntesis: La Fábrica de la Vida', imageId: 'video4' },
-  { id: 5, src: 'https://drive.google.com/file/d/1YINqtGlnBtXyHNeu5M4dFocyZXwElLN0/view?usp=sharing', title: 'Introducción a la Genética', imageId: 'video5' },
+  { id: 1, src: 'https://drive.google.com/file/d/1-bQrSwSUTPQ1KocHeDODHJSXT4w7U9VA/view?usp=sharing', title: 'Importancia de las plantas', imageId: 'video1' },
+  { id: 2, src: 'https://drive.google.com/file/d/1e_MfNPij1QOIlwMd5yrBvHR94e0qtLJW/view?usp=sharing', title: 'Partes de las plantas', imageId: 'video2' },
+  { id: 3, src: 'https://drive.google.com/file/d/1TuWn973yEoEddPn_m6V-5CTmYbKHd8s8/view?usp=sharing', title: 'Ciclo de las plantas', imageId: 'video3' },
+  { id: 4, src: 'https://drive.google.com/file/d/1rv1ugJCnqXlahkfsHOycTkueTkc7Up9i/view?usp=sharing', title: 'Animales Invertebrados', imageId: 'video4' },
+  { id: 5, src: 'https://drive.google.com/file/d/1YINqtGlnBtXyHNeu5M4dFocyZXwElLN0/view?usp=sharing', title: 'Animales Vertebrados', imageId: 'video5' },
 ];
 
 
