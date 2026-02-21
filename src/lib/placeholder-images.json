@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "video1",
+      "description": "Placeholder for video 1",
+      "imageUrl": "https://images.unsplash.com/photo-1509062522246-3755977927d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxlZHVjYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc3MTYwNjM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "education technology"
+    },
+    {
+      "id": "video2",
+      "description": "Placeholder for video 2",
+      "imageUrl": "https://images.unsplash.com/photo-1561112504-84ee0333e711?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuYXR1cmUlMjBsZWFybmluZ3xlbnwwfHx8fDE3NzE3MDA2NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nature learning"
+    },
+    {
+      "id": "video3",
+      "description": "Placeholder for video 3",
+      "imageUrl": "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY2llbmNlJTIwZXhwZXJpbWVudHxlbnwwfHx8fDE3NzE2MDU1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science experiment"
+    },
+    {
+      "id": "video4",
+      "description": "Placeholder for video 4",
+      "imageUrl": "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaWdpdGFsJTIwYXJ0fGVufDB8fHx8MTc3MTY4NzA0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital art"
+    },
+    {
+      "id": "video5",
+      "description": "Placeholder for video 5",
+      "imageUrl": "https://images.unsplash.com/photo-1653158861306-e5b3804f6115?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dmlydHVhbCUyMHJlYWxpdHl8ZW58MHx8fHwxNzcxNjQ1MTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "virtual reality"
+    }
+  ]
 }
