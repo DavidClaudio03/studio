@@ -1,25 +1,9 @@
 import Image from "next/image";
-import { videos, urls, aiExperts } from "@/lib/data";
+import { videos, urls } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { PlayCircle, Presentation, Bot } from "lucide-react";
+import { PlayCircle, Presentation } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AIChatModal } from "@/components/ai-chat-modal";
-import { ElevenLabsWidget } from "@/components/eleven-labs-widget";
-import { BrainCircuitIcon } from "@/components/icons/BrainCircuitIcon";
-import { LeafIcon } from "@/components/icons/LeafIcon";
-import { DnaIcon } from "@/components/icons/DnaIcon";
-import { AtomIcon } from "@/components/icons/AtomIcon";
-import React from "react";
-
-const iconMap: { [key: string]: React.ElementType } = {
-  BrainCircuitIcon,
-  Bot,
-  LeafIcon,
-  DnaIcon,
-  AtomIcon,
-};
 
 const VideoGallery = () => (
   <section>
@@ -107,46 +91,6 @@ const SlidesVisualizer = () => (
   </section>
 );
 
-const AIPanel = () => (
-  <section>
-    <Card>
-      <CardHeader>
-         <div className="flex items-center gap-4">
-            <Bot className="size-8 text-primary" />
-            <CardTitle>Panel de Consulta con Expertos IA</CardTitle>
-          </div>
-        <CardDescription>
-          Conversa con nuestros asistentes de IA para una experiencia de aprendizaje personalizada.
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {aiExperts.map((bot) => {
-          const BotIcon = iconMap[bot.icon];
-          const TriggerButton = (
-            <div className="group relative flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-primary/40 bg-card p-4 text-center transition-all hover:border-primary hover:bg-primary/10 h-36">
-              <div className="rounded-full bg-primary/10 p-3 transition-colors group-hover:bg-primary/20">
-                <BotIcon className="size-8 text-primary" />
-              </div>
-              <span className="font-semibold text-sm">{bot.name}</span>
-              <div className="absolute -bottom-3 rounded-full bg-background p-1">
-                <Bot className="size-5 text-accent" />
-              </div>
-            </div>
-          );
-          
-          if (bot.id === 'eleven-labs') {
-            return <ElevenLabsWidget key={bot.id} trigger={TriggerButton} bot={bot} />;
-          }
-          
-          return (
-             <AIChatModal key={bot.id} trigger={TriggerButton} bot={bot} />
-          );
-        })}
-      </CardContent>
-    </Card>
-  </section>
-);
-
 
 export default function LaboratorioIAPage() {
   return (
@@ -161,10 +105,7 @@ export default function LaboratorioIAPage() {
       </header>
       
       <VideoGallery />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-        <SlidesVisualizer />
-        <AIPanel />
-      </div>
+      <SlidesVisualizer />
     </div>
   );
 }

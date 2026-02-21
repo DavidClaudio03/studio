@@ -43,15 +43,6 @@ export const animalData = [
   { id: 'serpiente', name: 'Serpiente', type: 'Vertebrado', imageId: 'animal5', explanation: 'Correcto. A pesar de su cuerpo flexible, las serpientes tienen una columna vertebral muy larga compuesta de muchas vértebras.' },
 ];
 
-export const aiExperts = [
-    { id: 'learning-assistant', name: 'Tutor General', icon: 'BrainCircuitIcon', description: 'Tu asistente principal para cualquier duda general.' },
-    { id: 'eleven-labs', name: 'Asistente de Voz', icon: 'Bot', description: 'Explora temas complejos conversando conmigo.' },
-    { id: 'botany-expert', name: 'Experto en Botánica', icon: 'LeafIcon', description: 'Pregúntame sobre el reino de las plantas.' },
-    { id: 'fauna-specialist', name: 'Especialista en Fauna', icon: 'DnaIcon', description: 'Analicemos la diversidad y adaptaciones del reino animal.' },
-    { id: 'science-tutor', name: 'Tutor de Ciencias', icon: 'AtomIcon', description: 'Profundicemos en los principios de la física y la química.' },
-];
-
-
 export const rubricCriteria = [
   { criterion: 'Claridad y Precisión', excellent: 'Presenta conceptos con total claridad y sin errores.', good: 'Presenta conceptos de forma clara con errores menores.', needsImprovement: 'La presentación de conceptos es confusa o tiene errores significativos.' },
   { criterion: 'Uso de Recursos', excellent: 'Integra creativamente todos los recursos del módulo.', good: 'Utiliza la mayoría de los recursos del módulo de forma adecuada.', needsImprovement: 'No utiliza o utiliza incorrectamente los recursos del módulo.' },

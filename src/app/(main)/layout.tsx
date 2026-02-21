@@ -82,6 +82,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         </header>
         <main className="flex-1 p-4 md:p-8">{children}</main>
       </SidebarInset>
+      {/* @ts-ignore */}
+      <elevenlabs-convai agent-id="agent_7801khmjk06seegbb6msgw9b2q6d" />
     </SidebarProvider>
   );
 }
