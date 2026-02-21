@@ -13,25 +13,39 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Loader, Send, User, AlertCircle } from "lucide-react";
+import { Loader, Send, User, AlertCircle, Bot as BotIconLucide } from "lucide-react";
 import { aiLearningAssistant } from "@/ai/flows/ai-learning-assistant-flow";
 import { useToast } from "@/hooks/use-toast";
 import type { aiBots } from "@/lib/data";
+import { BrainCircuitIcon } from "@/components/icons/BrainCircuitIcon";
+import { LeafIcon } from "@/components/icons/LeafIcon";
+import { DnaIcon } from "@/components/icons/DnaIcon";
+import { AtomIcon } from "@/components/icons/AtomIcon";
+import React from "react";
+
+const iconMap: { [key: string]: React.ElementType } = {
+  BrainCircuitIcon,
+  Bot: BotIconLucide,
+  LeafIcon,
+  DnaIcon,
+  AtomIcon,
+};
 
 type Message = {
   role: "user" | "assistant";
   content: string;
 };
 
-type Bot = (typeof aiBots)[number];
+type BotData = (typeof aiBots)[number];
+type BotWithIcon = Omit<BotData, "icon"> & { icon: React.ElementType };
 
 export function AIChatModal({
   trigger,
-  bot,
+  bot: botWithIconName,
   isPlaceholder = false,
 }: {
   trigger: ReactNode;
-  bot: Bot;
+  bot: BotData;
   isPlaceholder?: boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +54,9 @@ export function AIChatModal({
   const [isLoading, setIsLoading] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
+
+  const BotIcon = iconMap[botWithIconName.icon];
+  const bot: BotWithIcon = { ...botWithIconName, icon: BotIcon };
 
   useEffect(() => {
     if (scrollAreaRef.current) {

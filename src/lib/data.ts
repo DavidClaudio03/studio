@@ -1,9 +1,4 @@
 import type { NavLink } from '@/types';
-import { BrainCircuitIcon } from '@/components/icons/BrainCircuitIcon';
-import { LeafIcon } from '@/components/icons/LeafIcon';
-import { DnaIcon } from '@/components/icons/DnaIcon';
-import { AtomIcon } from '@/components/icons/AtomIcon';
-import { Bot } from 'lucide-react';
 
 export const navLinks: NavLink[] = [
   { href: '/', label: 'Home', icon: 'LayoutGrid' },
@@ -49,11 +44,11 @@ export const faqs = [
 ];
 
 export const aiBots = [
-  { id: 'learning-assistant', name: 'Asistente de Aprendizaje', icon: BrainCircuitIcon, description: "Pregúntame cualquier cosa sobre tus lecciones." },
-  { id: 'eleven-labs', name: 'Asistente de Voz', icon: Bot, description: "Habla conmigo para explorar nuevos temas." },
-  { id: 'biology-bot', name: 'Bot de Biología', icon: LeafIcon, description: "Explora el fascinante mundo de los seres vivos." },
-  { id: 'genetics-bot', name: 'Bot de Genética', icon: DnaIcon, description: "Descubre los secretos del ADN y la herencia." },
-  { id: 'physics-bot', name: 'Bot de Física', icon: AtomIcon, description: "Entiende las leyes que gobiernan el universo." },
+  { id: 'learning-assistant', name: 'Asistente de Aprendizaje', icon: 'BrainCircuitIcon', description: "Pregúntame cualquier cosa sobre tus lecciones." },
+  { id: 'eleven-labs', name: 'Asistente de Voz', icon: 'Bot', description: "Habla conmigo para explorar nuevos temas." },
+  { id: 'biology-bot', name: 'Bot de Biología', icon: 'LeafIcon', description: "Explora el fascinante mundo de los seres vivos." },
+  { id: 'genetics-bot', name: 'Bot de Genética', icon: 'DnaIcon', description: "Descubre los secretos del ADN y la herencia." },
+  { id: 'physics-bot', name: 'Bot de Física', icon: 'AtomIcon', description: "Entiende las leyes que gobiernan el universo." },
 ];
 
 export const rubricCriteria = [

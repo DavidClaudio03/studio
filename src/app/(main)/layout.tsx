@@ -52,7 +52,7 @@ function NavItem({
 
   return (
     <SidebarMenuItem>
-      <Link href={href} legacyBehavior passHref>
+      <Link href={href}>
         <SidebarMenuButton
           isActive={isActive}
           tooltip={label}
@@ -66,6 +66,7 @@ function NavItem({
 }
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
   return (
     <SidebarProvider>
       <Sidebar>
@@ -124,7 +125,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <SidebarTrigger className="md:hidden" />
           <div className="flex-1">
             <h2 className="text-lg font-semibold tracking-tight">
-              {navLinks.find((link) => link.href === usePathname())?.label || 'Home'}
+              {navLinks.find((link) => link.href === pathname)?.label || 'Home'}
             </h2>
           </div>
         </header>

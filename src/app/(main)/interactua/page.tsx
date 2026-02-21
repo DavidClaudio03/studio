@@ -7,6 +7,19 @@ import { PlayCircle, Presentation, Bot } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AIChatModal } from "@/components/ai-chat-modal";
 import { ElevenLabsWidget } from "@/components/eleven-labs-widget";
+import { BrainCircuitIcon } from "@/components/icons/BrainCircuitIcon";
+import { LeafIcon } from "@/components/icons/LeafIcon";
+import { DnaIcon } from "@/components/icons/DnaIcon";
+import { AtomIcon } from "@/components/icons/AtomIcon";
+import React from "react";
+
+const iconMap: { [key: string]: React.ElementType } = {
+  BrainCircuitIcon,
+  Bot,
+  LeafIcon,
+  DnaIcon,
+  AtomIcon,
+};
 
 const VideoGallery = () => (
   <section>
@@ -108,7 +121,7 @@ const AIPanel = () => (
       </CardHeader>
       <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {aiBots.map((bot) => {
-          const BotIcon = bot.icon;
+          const BotIcon = iconMap[bot.icon];
           const TriggerButton = (
             <Button variant="outline" className="h-24 w-full flex flex-col items-center justify-center gap-2 p-4 text-center hover:bg-accent/20 hover:border-accent">
                 <BotIcon className="size-8 text-primary" />

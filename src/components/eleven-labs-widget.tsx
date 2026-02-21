@@ -10,20 +10,38 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import type { aiBots } from "@/lib/data";
+import { BrainCircuitIcon } from "@/components/icons/BrainCircuitIcon";
+import { LeafIcon } from "@/components/icons/LeafIcon";
+import { DnaIcon } from "@/components/icons/DnaIcon";
+import { AtomIcon } from "@/components/icons/AtomIcon";
+import { Bot as BotIconLucide } from "lucide-react";
+import React from "react";
 
-type Bot = (typeof aiBots)[number];
+const iconMap: { [key: string]: React.ElementType } = {
+  BrainCircuitIcon,
+  Bot: BotIconLucide,
+  LeafIcon,
+  DnaIcon,
+  AtomIcon,
+};
+
+type BotData = (typeof aiBots)[number];
+type BotWithIcon = Omit<BotData, 'icon'> & { icon: React.ElementType };
 
 const SCRIPT_ID = "elevenlabs-convai-script";
 const AGENT_ID = "agent_7801khmjk06seegbb6msgw9b2q6d";
 
 export function ElevenLabsWidget({
   trigger,
-  bot,
+  bot: botWithIconName,
 }: {
   trigger: ReactNode;
-  bot: Bot;
+  bot: BotData;
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const BotIcon = iconMap[botWithIconName.icon];
+  const bot: BotWithIcon = { ...botWithIconName, icon: BotIcon };
 
   useEffect(() => {
     if (isOpen) {
