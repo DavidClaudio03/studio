@@ -12,8 +12,8 @@ export const urls = {
   infographic: 'https://drive.google.com/file/d/1Hzw-rGoeDs27QnZBgv-JkMIsKbGbBcLo/view?usp=sharing',
   activationAudio: 'https://drive.google.com/file/d/16_LenNt17G-e6ebyqy060L_3uNkXcZ7u/view?usp=sharing',
   compendium: 'https://docs.google.com/document/d/16_LenNt17G-e6ebyqy060L_3uNkXcZ7u/preview',
-  canvaSlide1: 'https://www.canva.com/design/DAHAkKTcoQo/view?embed',
-  canvaSlide2: 'https://www.canva.com/design/DAHBvOz_8Vc/view?embed',
+  canvaSlide1: 'https://www.canva.com/design/DAHAkKTcoQo/ogIciyh0j9XeYni7ZlzxjQ/view?embed',
+  canvaSlide2: 'https://www.canva.com/design/DAHBvOz_8Vc/b8jBKub3e0lFIUcn1EYX_A/view?embed',
   finalChallengeGuide: 'https://docs.google.com/document/d/1rv1ugJCnqXlahkfsHOycTkueTkc7Up9i/preview',
 };
 
