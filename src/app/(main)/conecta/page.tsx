@@ -30,9 +30,6 @@ export default function FundamentosPage() {
             <p className="text-muted-foreground mb-6">
               Esta infografía resume el ciclo hidrológico de manera clara y concisa. Es el punto de partida para entender cómo funciona nuestro planeta. Haz clic en el botón para explorar el documento completo.
             </p>
-            <div className="w-full h-64 bg-background rounded-md flex items-center justify-center border-2 border-dashed">
-                <p className="text-muted-foreground">[Placeholder para previsualización de PDF]</p>
-            </div>
           </CardContent>
           <CardFooter className="bg-muted/30 p-4">
             <Button asChild className="w-full" size="lg">
