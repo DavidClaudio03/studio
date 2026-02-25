@@ -1,34 +1,9 @@
-import type {NextConfig} from 'next';
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+// next.config.ts
+const nextConfig = {
+  output: 'export', // Indica que queremos un sitio estático
+  basePath: '/studio', // Reemplaza 'studio' por el nombre exacto de tu repositorio
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    unoptimized: true, // GitHub Pages no soporta la optimización de imágenes nativa de Next.js
   },
 };
 
