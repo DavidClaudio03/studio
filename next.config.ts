@@ -1,9 +1,9 @@
-// next.config.ts
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Obligatorio para GitHub Pages
-  basePath: '/studio', // El nombre de tu repositorio
+  output: 'export', // Vuelve el sitio estático para GitHub
+  basePath: '/studio', // EL NOMBRE DE TU REPOSITORIO
   images: {
-    unoptimized: true, // Pages no soporta optimización de imágenes dinámica
+    unoptimized: true, // Requerido para sitios estáticos en Pages
   },
 };
 
